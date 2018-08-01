@@ -78,6 +78,8 @@ class RealtimeSignalProcessor(BaseSignalProcessor):
     """
 
     def setup(self):
+        print(" I am inside the relatimesignalprocessor")
+        print(self.handle_save)
         # Naive (listen to all model saves).
         models.signals.post_save.connect(self.handle_save)
         models.signals.post_delete.connect(self.handle_delete)
